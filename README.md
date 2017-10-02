@@ -1,2 +1,2 @@
 # angular-js
-Projects using Angular.js
+-Projects using Angular.js
