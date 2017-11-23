@@ -18,11 +18,17 @@
   <!--</li>-->
 <!--</ul>-->
 
-<p>Model Binding</p>
-<input type="text" [(ngModel)]="name">
-<p>{{ name }}</p>
 
 <br />
+<div class="container">
+  <div class="row">
+    <p>Model Binding</p>
+    <input type="text" [(ngModel)]="name">
+    <p>{{ name }}</p>
 
-<app-servers></app-servers>
+    <app-servers></app-servers>
+    <!--<div app-servers></div>-->
+    <!--<div class="app-servers"></div>-->
+  </div>
+</div>
 
