@@ -1,11 +1,15 @@
 <hr/>
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<button class="btn btn-primary"
+        [disabled]="!allowNewServer"
+        (click)="onCreateServer()">Add Server</button>
 
 <p>Printing text with String interpolation</p>
 <p>{{ allowNewServer }}</p>
 
 <p>Printing text with Property Binding</p>
 <p [innerText]="allowNewServer"></p>
+
+<p>{{ serverCreationStatus }}</p>
 
 <app-server></app-server>
 
