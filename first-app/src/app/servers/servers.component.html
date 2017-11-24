@@ -1,4 +1,10 @@
 <hr/>
+<label>Server Name</label
+<input type="text"
+       class="form-control"
+       (input)="onUpdateServerName($event)" />
+<p>{{ serverName }}</p>
+<br>
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
         (click)="onCreateServer()">Add Server</button>
