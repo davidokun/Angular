@@ -8,18 +8,4 @@ import {Component} from '@angular/core';
 export class Assigment2Component {
 
   userName = '';
-  buttonEnabled = false;
-
-  onTextChange() {
-    if (this.userName !== '') {
-      this.buttonEnabled = true;
-    } else {
-      this.buttonEnabled = false;
-    }
-  }
-
-  onButtonClick() {
-    this.userName = '';
-    this.buttonEnabled = false;
-  }
 }

@@ -1,15 +1,14 @@
 <h3>Assigment 2 - Data Binding</h3>
 
-<p>Username</p>
-<input type="text" [(ngModel)]="userName"
-       (input)="onTextChange()"/>
+<label for="userName">Username</label>
+<input id="userName" type="text" [(ngModel)]="userName"/>
 
 <p>{{ userName }}</p>
 
 <br />
 
 <button class="btn btn-primary"
-        [disabled]="!buttonEnabled"
-        (click)="onButtonClick()">Reset Username</button>
+        [disabled]="userName === ''"
+        (click)="userName = ''">Reset Username</button>
 
 
