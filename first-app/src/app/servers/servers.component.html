@@ -1,9 +1,18 @@
 <hr/>
-<label>Server Name</label
+<label>Server Name - Event Binding</label>
 <input type="text"
        class="form-control"
        (input)="onUpdateServerName($event)" />
 <p>{{ serverName }}</p>
+
+<hr>
+
+<label>Server Name - Two way Binding</label>
+<input type="text"
+       class="form-control"
+       [(ngModel)]="serverName" />
+<p>{{ serverName }}</p>
+
 <br>
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
