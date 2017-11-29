@@ -13,7 +13,8 @@ export class Assigment3Component {
   toggle() {
 
     this.isDisplayed = this.isDisplayed !== true;
-    this.clickCount.push(this.clickCount.length + 1);
+    // this.clickCount.push(this.clickCount.length + 1);
+    this.clickCount.push(new Date());
   }
 
 }
