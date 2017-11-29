@@ -1,0 +1,11 @@
+<button class="btn btn-primary" (click)="toggle()">Display details!</button>
+<br />
+<p *ngIf="isDisplayed">Hello World!!</p>
+
+<p *ngFor="let clicks of clickCount"
+   [ngClass]="{colorT: clicks >= 5}"
+   [ngStyle]="{backgroundColor: clicks >= 5 ? 'blue' : ''}">
+
+  Click: {{ clicks }}
+
+</p>
