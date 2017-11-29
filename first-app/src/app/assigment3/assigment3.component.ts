@@ -9,12 +9,11 @@ export class Assigment3Component {
 
   isDisplayed = false;
   clickCount = [];
-  count = 0;
 
   toggle() {
-    this.count++;
+
     this.isDisplayed = this.isDisplayed !== true;
-    this.clickCount.push(this.count);
+    this.clickCount.push(this.clickCount.length + 1);
   }
 
 }
