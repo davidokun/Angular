@@ -2,10 +2,10 @@
 <br />
 <p *ngIf="isDisplayed">Hello World!!</p>
 
-<p *ngFor="let clicks of clickCount"
-   [ngClass]="{colorT: clicks >= 5}"
-   [ngStyle]="{backgroundColor: clicks >= 5 ? 'blue' : ''}">
+<p *ngFor="let clicks of clickCount; let i = index"
+   [ngClass]="{colorT: i >= 4}"
+   [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : ''}">
 
-  Click: {{ clicks }}
+  {{ clicks }}
 
 </p>
