@@ -4,6 +4,9 @@ This repo contains multiple projects using Angular 5 framework.
 
 ## Useful CLI commands
 
+Install npm
+- `sudo apt-get install npm`
+
 Install Angular CLI:
 - `npm install -g @angular/cli`
 
