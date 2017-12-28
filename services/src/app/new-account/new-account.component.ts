@@ -11,6 +11,10 @@ export class NewAccountComponent {
   // Dependency Injection by Constructor.
   // AccountService instance came from parent component. By the hierarchical injector.
   constructor(private accountService: AccountService) {
+
+    accountService.statusUpdated.subscribe(
+      (status: string) => alert('New Status: ' + status)
+    );
   }
 
   onCreateAccount(accountName: string, accountStatus: string) {
