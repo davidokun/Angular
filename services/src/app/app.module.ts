@@ -5,6 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
+import {AccountService} from './util/account.service';
+import {LoggingService} from './util/logging.service';
 
 
 @NgModule({
@@ -16,7 +18,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [AccountService, LoggingService], // Instances use application wide.
   bootstrap: [AppComponent]
 })
 export class AppModule { }
