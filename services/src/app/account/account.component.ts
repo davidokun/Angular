@@ -6,7 +6,7 @@ import {AccountService} from '../util/account.service';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService, AccountService]
+  providers: [LoggingService]
 })
 export class AccountComponent {
 
@@ -14,6 +14,7 @@ export class AccountComponent {
   @Input() id: number;
 
   // Dependency Injection by Constructor.
+  // AccountService instance came from parent component. By the hierarchical injector.
   constructor(private loggingService: LoggingService,
               private accountService: AccountService) {
   }
