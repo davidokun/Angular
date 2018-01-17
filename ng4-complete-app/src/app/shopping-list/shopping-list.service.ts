@@ -1,9 +1,9 @@
 import {IngredientModel} from '../shared/ingredient.model';
-import {EventEmitter} from '@angular/core';
+import {Subject} from 'rxjs/Subject';
 
 export class ShoppingListService {
 
-  ingredientsChanged = new EventEmitter<IngredientModel[]>();
+  ingredientsChanged = new Subject<IngredientModel[]>();
 
   private ingredients: IngredientModel[] = [
     new IngredientModel('Apples', 5),
@@ -16,12 +16,12 @@ export class ShoppingListService {
 
   addIngredient(ingredient: IngredientModel) {
     this.ingredients.push(ingredient);
-    this.ingredientsChanged.emit(this.ingredients.slice());
+    this.ingredientsChanged.next(this.ingredients.slice());
   }
 
   addIngredients(ingredients: IngredientModel[]) {
     // Spread operator. Convert an array to list. ES6 Feature.
     this.ingredients.push(...ingredients);
-    this.ingredientsChanged.emit(this.ingredients.slice());
+    this.ingredientsChanged.next(this.ingredients.slice());
   }
 }
