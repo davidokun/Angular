@@ -16,6 +16,24 @@ export class AppComponent {
 
   suggestUserName() {
     const suggestedName = 'Superuser';
+
+    // Override ALL Form's inputs with values
+    // this.signupForm.setValue({
+    //   userData: {
+    //     username: suggestedName,
+    //     email: ''
+    //   },
+    //   secret: 'teacher',
+    //   questionAnswer: '',
+    //   gender: 'Female'
+    // });
+
+    // Just override specific form's values
+    this.signupForm.form.patchValue({
+      userData: {
+        username: suggestedName
+      }
+    });
   }
 
   // onSubmitForm(form: NgForm) {
