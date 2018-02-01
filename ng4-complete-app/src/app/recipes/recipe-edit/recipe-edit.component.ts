@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from "@angular/router";
-import {FormControl, FormGroup} from "@angular/forms";
-import {RecipeService} from "../recipe.service";
+import {ActivatedRoute, Params} from '@angular/router';
+import {FormControl, FormGroup} from '@angular/forms';
+import {RecipeService} from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-edit',
@@ -44,5 +44,9 @@ export class RecipeEditComponent implements OnInit {
       'imagePath': new FormControl(imagePath),
       'description': new FormControl(description)
     });
+  }
+
+  onSubmitForm() {
+    console.log(this.recipeForm.value);
   }
 }
