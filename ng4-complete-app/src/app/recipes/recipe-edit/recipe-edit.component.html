@@ -76,7 +76,11 @@
             </div>
             <div class="col-xs-2">
               <label for="delete">Remove</label>
-              <button id="delete" class="btn btn-danger">X</button>
+              <button
+                id="delete"
+                type="button"
+                class="btn btn-danger"
+                (click)="onDeleteIngredient(i)">X</button>
             </div>
           </div>
           <hr>
