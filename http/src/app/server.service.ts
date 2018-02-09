@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Http, Headers, Response} from '@angular/http';
 import 'rxjs/Rx';
+import {Observable} from 'rxjs/Observable';
 
 
 @Injectable()
@@ -32,6 +33,11 @@ export class ServerService {
             server.name = 'FETCHED_' + server.name;
           }
           return data;
+        }
+      ).catch(
+        (error: Response) => {
+          console.log('Error retrieving the servers from backend ' + error);
+          return Observable.throw(error);
         }
       );
   }
