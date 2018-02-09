@@ -13,7 +13,11 @@ export class ServerService {
       'Content-Type' : 'application/json'
     });
 
-    return this.http.post('https://angular-http-module.firebaseio.com/data.json',
+    // return this.http.post('https://angular-http-module.firebaseio.com/data.json',
+    //   servers,
+    //   {headers: myHeaders});
+
+    return this.http.put('https://angular-http-module.firebaseio.com/data.json',
       servers,
       {headers: myHeaders});
   }
