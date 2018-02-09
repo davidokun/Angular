@@ -17,4 +17,8 @@ export class ServerService {
       servers,
       {headers: myHeaders});
   }
+
+  getServers() {
+    return this.http.get('https://angular-http-module.firebaseio.com/data.json');
+  }
 }
