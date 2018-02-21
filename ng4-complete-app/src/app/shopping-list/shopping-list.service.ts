@@ -15,12 +15,6 @@ export class ShoppingListService {
     return this.ingredients[index];
   }
 
-  addIngredients(ingredients: IngredientModel[]) {
-    // Spread operator. Convert an array to list. ES6 Feature.
-    this.ingredients.push(...ingredients);
-    this.ingredientsChanged.next(this.ingredients.slice());
-  }
-
   updateIngredient(index: number, newIngredient: IngredientModel) {
     this.ingredients[index] = newIngredient;
     this.ingredientsChanged.next(this.ingredients.slice());
