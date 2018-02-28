@@ -2,15 +2,13 @@ import {Injectable} from '@angular/core';
 import {RecipeService} from '../recipes/recipe.service';
 import {RecipeModel} from '../recipes/recipe.model';
 import 'rxjs/Rx';
-import {AuthService} from '../auth/auth.service';
 import {HttpClient, HttpHeaders, HttpRequest} from '@angular/common/http';
 
 @Injectable()
 export class DataStorageService {
 
   constructor(private httpClient: HttpClient,
-              private recipeService: RecipeService,
-              private authService: AuthService) {}
+              private recipeService: RecipeService) {}
 
   storeRecipes() {
     const headers = new HttpHeaders().set('myHeader1', 'mayheader1-value')
