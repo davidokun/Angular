@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {DataStorageService} from '../../shared/data-storage.service';
-import {HttpEvent} from '@angular/common/http';
 import {Store} from '@ngrx/store';
 import * as fromApp from '../../store/app.reducers';
 import * as fromAuth from '../../auth/store/auth.reducers';
@@ -26,14 +25,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onSaveData() {
-    this.dataStorageService.storeRecipes()
-      .subscribe(
-        (response: HttpEvent<Object>) => {
-          console.log(response);
-          // console.log(response.type === HttpEventType.Sent);
-          // console.log(response.type === HttpEventType.Response);
-        }
-      );
+    this.store.dispatch(new RecipeActions.StoreRecipes());
   }
 
   onFetchData() {
