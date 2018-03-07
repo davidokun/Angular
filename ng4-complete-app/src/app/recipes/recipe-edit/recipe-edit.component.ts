@@ -47,7 +47,7 @@ export class RecipeEditComponent implements OnInit {
           imagePath = recipe.imagePath;
           description = recipe.description;
 
-          if (recipe['shoppingListState']) {
+          if (recipe['ingredients']) {
             for (const ingredient of recipe.ingredients) {
               recipeIngredients.push(
                 new FormGroup({
@@ -108,5 +108,9 @@ export class RecipeEditComponent implements OnInit {
 
   onDeleteIngredient(index: number) {
     (<FormArray>this.recipeForm.get('shoppingListState')).removeAt(index);
+  }
+
+  getControls() {
+    return (<FormArray>this.recipeForm.get('ingredients')).controls;
   }
 }
