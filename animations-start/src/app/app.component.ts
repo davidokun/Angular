@@ -11,7 +11,7 @@ import {state, style, trigger} from '@angular/animations';
         transform: 'translateX(0)'
       })),
       state('highlighted', style({
-        backgroundColor: 'blue',
+        'background-color': 'blue',
         transform: 'translateX(100px)'
       }))
     ])
@@ -24,4 +24,8 @@ export class AppComponent {
     onAdd(item) {
       this.list.push(item);
     }
+
+  onAnimate() {
+    this.state === 'normal' ? this.state = 'highlighted' : this.state = 'normal';
+  }
 }
