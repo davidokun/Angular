@@ -127,4 +127,12 @@ export class AppComponent {
   onDelete(item) {
     this.list.pop();
   }
+
+  animationStarted(event) {
+    console.log(event);
+  }
+
+  animationEnded(event) {
+    console.log(event);
+  }
 }
