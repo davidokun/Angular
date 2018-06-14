@@ -1,4 +1,4 @@
-# Angular Examples
+# Angular 5 Examples
 
 This repo contains multiple projects using Angular 5 framework.
 
